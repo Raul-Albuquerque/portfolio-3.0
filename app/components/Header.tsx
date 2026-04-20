@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import LanguageSwitch from "./LanguageSwitch";
+import LanguageSwitch from "./ui/LanguageSwitch";
 
 const navItems = ["Sobre", "Habilidades", "Experiência", "Contato"];
 
@@ -11,7 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-(--color-header-bg) border border-(--color-header-border) md:px-0 px-1.5">
+    <header className="fixed top-0 inset-x-0 z-50 bg-(--color-header-bg) border border-(--color-header-border) md:px-0 px-1.5">
       <nav className="container py-4 mx-auto flex items-center justify-between">
         <h1>
           <a href="#" aria-label="Ir para o topo">
