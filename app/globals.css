@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #070A17;
+  --color-header-bg: rgba(161, 168, 195, 0.12);
+  --color-header-border: rgba(214, 225, 249, 0.1);
+  --color-gradient-from: #0061FF;
+  --color-gradient-to: #60EFFF;
 }
 
+body {
+  background-color: var(--color-bg);
+}
