@@ -1,0 +1,28 @@
+{
+  "header": {
+    "logoAriaLabel": "Back to top",
+    "nav": {
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "name": "RAUL ALBUQUERQUE",
+    "role": "FULL STACK DEVELOPER",
+    "cta": "EXPLORE THE DEPTHS"
+  },
+  "skills": {
+    "eyebrow": "ALWAYS IN MOTION",
+    "title": "MY SKILLS",
+    "subtitle": "Currents that never stop — scroll and dive into each one",
+    "categories": {
+      "frontend": "Frontend Current",
+      "backend": "Backend Current",
+      "database": "Database Current",
+      "infra": "Infrastructure & Tools Current",
+      "digital-marketing": "Digital Marketing Current"
+    }
+  }
+}

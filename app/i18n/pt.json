@@ -1,0 +1,28 @@
+{
+  "header": {
+    "logoAriaLabel": "Ir para o topo",
+    "nav": {
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "experience": "Experiência",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "name": "RAUL ALBUQUERQUE",
+    "role": "DESENVOLVEDOR FULL STACK",
+    "cta": "EXPLORAR AS PROFUNDEZAS"
+  },
+  "skills": {
+    "eyebrow": "SEMPRE EM MOVIMENTO",
+    "title": "MINHAS HABILIDADES",
+    "subtitle": "Correntes que nunca param — role e mergulhe em cada uma",
+    "categories": {
+      "frontend": "Corrente Frontend",
+      "backend": "Corrente Backend",
+      "database": "Corrente de Banco de Dados",
+      "infra": "Corrente de Infraestrutura & Ferramentas",
+      "digital-marketing": "Corrente de Marketing Digital"
+    }
+  }
+}

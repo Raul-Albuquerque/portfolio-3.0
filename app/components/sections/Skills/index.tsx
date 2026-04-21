@@ -9,6 +9,7 @@ import { skills } from "@/app/data/skills";
 import SkillCard from "./SkillCard";
 import { RING_CONFIGS } from "./constants";
 import { surgena } from "@/app/fonts";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,7 @@ export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const { dict } = useLanguage();
 
   const searchParams = useSearchParams();
   const isMkt = searchParams.get("isMkt") === "1";
@@ -106,15 +108,15 @@ export default function Skills() {
         >
           <div className="mb-32">
             <p className="text-gray-500 text-sm tracking-widest uppercase mb-4">
-              ALWAYS IN MOTION
+              {dict.skills.eyebrow}
             </p>
             <h2
               className={`${surgena.className} text-5xl md:text-7xl bg-linear-to-r from-(--color-gradient-from) to-(--color-gradient-to) bg-clip-text text-transparent mb-4`}
             >
-              MY SKILLS
+              {dict.skills.title}
             </h2>
             <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
-              Currents that never stop — scroll and dive into each one
+              {dict.skills.subtitle}
             </p>
           </div>
         </div>
@@ -126,6 +128,7 @@ export default function Skills() {
               key={group.categoryID}
               group={group}
               visible={i === activeRingIndex}
+              categoryLabel={dict.skills.categories[group.categoryID]}
             />
           ))}
         </div>

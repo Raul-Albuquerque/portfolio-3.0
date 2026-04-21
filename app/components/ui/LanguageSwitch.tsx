@@ -3,16 +3,16 @@
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import { useLanguage } from "@/app/context/LanguageContext";
+import type { Locale } from "@/app/i18n";
 
-type Language = "PT" | "EN";
-
-const languages: { code: Language; label: string; flag: string }[] = [
+const languages: { code: Locale; label: string; flag: string }[] = [
   { code: "PT", label: "Português", flag: "/brazil-flag.svg" },
   { code: "EN", label: "English", flag: "/us-flag.svg" },
 ];
 
 export default function LanguageSwitch() {
-  const [current, setCurrent] = useState<Language>("PT");
+  const { locale, setLocale } = useLanguage();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -26,12 +26,11 @@ export default function LanguageSwitch() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const currentLang = languages.find((l) => l.code === current)!;
+  const currentLang = languages.find((l) => l.code === locale)!;
 
-  function select(code: Language) {
-    setCurrent(code);
+  function select(code: Locale) {
+    setLocale(code);
     setOpen(false);
-    console.log(code);
   }
 
   return (
@@ -64,7 +63,7 @@ export default function LanguageSwitch() {
             <li key={lang.code}>
               <button
                 role="option"
-                aria-selected={current === lang.code}
+                aria-selected={locale === lang.code}
                 onClick={() => select(lang.code)}
                 className="flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-black/10 cursor-pointer"
               >

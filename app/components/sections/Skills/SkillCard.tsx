@@ -2,14 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import type { SkillGroup } from "@/app/data/skills";
-import { CATEGORY_LABELS } from "./constants";
 
 interface Props {
   group: SkillGroup;
   visible: boolean;
+  categoryLabel: string;
 }
 
-export default function SkillCard({ group, visible }: Props) {
+export default function SkillCard({ group, visible, categoryLabel }: Props) {
   const cardRef = useRef<HTMLDivElement>(null);
   const wasVisible = useRef(false);
 
@@ -58,7 +58,7 @@ export default function SkillCard({ group, visible }: Props) {
           className="text-sm font-semibold mb-3 tracking-widest uppercase text-center"
           style={{ color: "#60efff" }}
         >
-          {CATEGORY_LABELS[group.categoryID]}
+          {categoryLabel}
         </p>
 
         {/* Skills grid */}
