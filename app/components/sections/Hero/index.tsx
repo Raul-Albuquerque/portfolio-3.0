@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 
 import { surgena } from "@/app/fonts";
+import Button from "../../ui/Button";
 
 const SharkCanvas = dynamic(() => import("./SharkCanvas"), { ssr: false });
 
@@ -21,9 +22,11 @@ export default function Hero() {
         >
           FULL STACK DEVELOPER
         </h2>
-        <button className="bg-linear-to-r from-[#0061FF] to-[#60EFFF] px-6 py-3 rounded-lg text-white font-regular">
-          DIVE WITH ME
-        </button>
+        <Button
+          text="DIVE WITH ME"
+          theme="hero"
+          onClick={() => console.log("clicado")}
+        />
       </article>
     </section>
   );
