@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 import MobileMenu from "../ui/MobileMenu";
@@ -12,9 +12,24 @@ const navItems = ["Sobre", "Habilidades", "Experiência", "Contato"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-(--color-header-bg) border border-(--color-header-border) md:px-0 px-1.5">
+    <header
+      className="fixed top-0 inset-x-0 z-50 border border-(--color-header-border) md:px-0 px-1.5 transition-colors duration-300"
+      style={{
+        background: scrolled
+          ? "rgba(2, 8, 26, 0.88)"
+          : "var(--color-header-bg)",
+        backdropFilter: scrolled ? "blur(12px)" : "blur(4px)",
+      }}
+    >
       <nav className="container py-4 mx-auto flex items-center justify-between">
         <h1>
           <a href="#" aria-label="Ir para o topo">

@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
+import Skills from "./components/sections/Skills";
 
 export default function Home() {
   return (
@@ -7,6 +9,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Suspense>
+          <Skills />
+        </Suspense>
       </main>
     </>
   );

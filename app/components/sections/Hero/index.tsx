@@ -23,7 +23,7 @@ export default function Hero() {
           FULL STACK DEVELOPER
         </h2>
         <Button
-          text="DIVE WITH ME"
+          text="EXPLORE THE DEPTHS"
           theme="hero"
           onClick={() => console.log("clicado")}
         />
