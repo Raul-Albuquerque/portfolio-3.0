@@ -107,15 +107,16 @@ export default function Skills() {
           style={{ opacity: introOpacity, transition: "opacity 0.1s linear" }}
         >
           <div className="mb-32">
-            <p className="text-gray-500 text-sm tracking-widest uppercase mb-4">
+            <p suppressHydrationWarning className="text-gray-500 text-sm tracking-widest uppercase mb-4">
               {dict.skills.eyebrow}
             </p>
             <h2
+              suppressHydrationWarning
               className={`${surgena.className} text-5xl md:text-7xl bg-linear-to-r from-(--color-gradient-from) to-(--color-gradient-to) bg-clip-text text-transparent mb-4`}
             >
               {dict.skills.title}
             </h2>
-            <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
+            <p suppressHydrationWarning className="text-xs text-gray-500 max-w-xs leading-relaxed">
               {dict.skills.subtitle}
             </p>
           </div>

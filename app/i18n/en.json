@@ -24,5 +24,66 @@
       "infra": "Infrastructure & Tools Current",
       "digital-marketing": "Digital Marketing Current"
     }
+  },
+  "milestones": {
+    "title": "MY PATH",
+    "subtitle": "EVERY MILESTONE, A TIDE",
+    "text": "From military leadership to code — every choice was a current that brought me here.",
+    "milestones_cards": {
+      "military": {
+        "date": "Jun 2016",
+        "region": "Marabá-PA",
+        "title": "Where It All Began",
+        "description": "As an Officer in the Brazilian Army, I led a team responsible for acquisitions and contracts. Here I learned that discipline, strategy, and accountability are non-negotiable."
+      },
+      "law_school": {
+        "date": "Dec 2022",
+        "region": "Marabá-PA",
+        "title": "The Detour That Led Me Here",
+        "description": "Completed my Law degree and, in that moment of reflection, it became clear that the legal world wasn't my place. I researched, discovered technology, and fell in love with it. There was no turning back."
+      },
+      "transition": {
+        "date": "Jun 2023",
+        "region": "Recife-PE",
+        "title": "Diving Into the Unknown",
+        "description": "I closed the military chapter and dove headfirst into uncharted waters. With full focus and a lot of curiosity, I dedicated myself entirely to building a new foundation in tech."
+      },
+      "software_college": {
+        "date": "Jan 2024",
+        "region": "Recife-PE",
+        "title": "The Right Degree",
+        "description": "I started Software Engineering — this time, with no doubts. Every subject confirmed what I already felt: technology wasn't just a choice, it was an identity."
+      },
+      "freelancer": {
+        "date": "Feb 2024",
+        "region": "Remote",
+        "title": "First Waves",
+        "description": "I took my first steps as an independent developer, building digital presence for small businesses. Every delivered site was proof I was growing."
+      },
+      "siberia": {
+        "date": "May 2024",
+        "region": "Remote",
+        "title": "First Current",
+        "description": "At Siberia Digital, my first professional experience in tech and it ran deep. Beyond development, I dove into Digital Marketing, working across the full infrastructure of offers, funnels, and automations."
+      },
+      "voluntary": {
+        "date": "Jul 2024",
+        "region": "Remote",
+        "title": "Building With Purpose",
+        "description": "At Código Certo Coders, I led a volunteer development team. I learned that collaborative code carries a different weight — it holds the energy of those who believe in what they're building."
+      },
+      "machlev": {
+        "date": "Sep 2025",
+        "region": "Remote",
+        "title": "Refining the Surface",
+        "description": "At Machlev, I focused on what users see and feel. I worked on evolving the platform's interface with a focus on usability, responsiveness, and visual consistency."
+      },
+      "freelancer_two": {
+        "date": "Jan 2026",
+        "region": "Remote",
+        "title": "Open Waters",
+        "description": "Back to freelancing, I expanded into more complex solutions — quizzes, FastAPI microservices, n8n automations, and multi-platform integrations. Every project, a new challenge to navigate."
+      }
+    }
   }
 }

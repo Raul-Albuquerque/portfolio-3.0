@@ -24,5 +24,66 @@
       "infra": "Corrente de Infraestrutura & Ferramentas",
       "digital-marketing": "Corrente de Marketing Digital"
     }
+  },
+  "milestones": {
+    "title": "MINHA JORNADA",
+    "subtitle": "CADA MARCO, UMA MARÉ",
+    "text": "Da liderança militar ao código — cada escolha foi uma corrent que me trouxe até aqui.",
+    "milestones_cards": {
+      "military": {
+        "date": "JUN 2016",
+        "region": "Marabá-PA",
+        "title": "Onde tudo começou",
+        "description": "Como Oficial do Exército Brasileiro, liderei uma equipe responsável por licitações e contratos. Foi aqui que aprendi que disciplina, estratégia e responsabilidade não são opcionais."
+      },
+      "law_school": {
+        "date": "DEZ 2022",
+        "region": "Marabá-PA",
+        "title": "O desvio que me direcionou",
+        "description": "Concluí minha graduação em Direito e, naquele momento de reflexão, ficou claro que o universo jurídico não era o meu lugar. Pesquisei, descobri a tecnologia e me apaixonei. Não havia mais volta."
+      },
+      "transition": {
+        "date": "JUN 2023",
+        "region": "Recife-PE",
+        "title": "Mergulho no desconhecido",
+        "description": "Encerrei minha carreira militar e mergulhei de cabeça no que ainda não dominava. Com foco total e muita curiosidade, dediquei-me inteiramente a construir uma nova base na área de tecnologia."
+      },
+      "software_college": {
+        "date": "JAN 2024",
+        "region": "Recife-PE",
+        "title": "A graduação certa",
+        "description": "Iniciei Engenharia de Software — desta vez, sem dúvidas. Cada disciplina confirmava o que eu já sentia: tecnologia não era só uma escolha, era uma identificação."
+      },
+      "freelancer": {
+        "date": "FEV 2024",
+        "region": "Remoto",
+        "title": "Primeiras ondas",
+        "description": "Dei os primeiros passos como desenvolvedor autônomo, construindo presença digital para pequenos negócios. Cada site entregue era a prova de que eu estava evoluindo."
+      },
+      "siberia": {
+        "date": "MAIO 2024",
+        "region": "Remoto",
+        "title": "Primeira correnteza",
+        "description": "Na Siberia Digital, minha primeira experiência profissional na área e ela veio com profundidade. Além do desenvolvimento, mergulhei no universo do Marketing Digital, atuando em toda a infraestrutura de ofertas, funis e automações."
+      },
+      "voluntary": {
+        "date": "JUL 2024",
+        "region": "Remoto",
+        "title": "Construindo com propósito",
+        "description": " Na comunidade Código Certo Coders, liderei uma equipe de desenvolvimento voluntário. Aprendi que código colaborativo tem um peso diferente — ele carrega a energia de quem acredita no que está construindo."
+      },
+      "machlev": {
+        "date": "SET 2025",
+        "region": "Remoto",
+        "title": "Refinando a superfície",
+        "description": "Na Machlev, foquei no que o usuário vê e sente. Atuei na evolução da interface da plataforma com foco em usabilidade, responsividade e consistência visual."
+      },
+      "freelancer_two": {
+        "date": "ABR 2026",
+        "region": "Remoto",
+        "title": "Águas abertas",
+        "description": "De volta ao trabalho Freelancer, expandi meu leque para soluções mais complexas — quizzes, microsserviços com FastAPI, automações com n8n e integrações em múltiplas plataformas. Cada projeto, um novo desafio para navegar."
+      }
+    }
   }
 }
