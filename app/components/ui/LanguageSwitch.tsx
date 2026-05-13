@@ -4,11 +4,10 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/app/context/LanguageContext";
-import type { Locale } from "@/app/i18n";
 
-const languages: { code: Locale; label: string; flag: string }[] = [
-  { code: "PT", label: "Português", flag: "/brazil-flag.svg" },
-  { code: "EN", label: "English", flag: "/us-flag.svg" },
+const languages = [
+  { code: "pt-br" as const, label: "Português", flag: "/brazil-flag.svg" },
+  { code: "en" as const, label: "English", flag: "/us-flag.svg" },
 ];
 
 export default function LanguageSwitch() {
@@ -28,7 +27,7 @@ export default function LanguageSwitch() {
 
   const currentLang = languages.find((l) => l.code === locale)!;
 
-  function select(code: Locale) {
+  function select(code: "pt-br" | "en") {
     setLocale(code);
     setOpen(false);
   }
@@ -57,7 +56,7 @@ export default function LanguageSwitch() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 mt-2 w-40 rounded-md shadow-lg z-50 bg-[#0E1220] border border-[rgba(214, 225, 249, 0.15)]"
+          className="absolute right-0 mt-2 w-40 rounded-md shadow-lg z-50 bg-[#0E1220] border border-[rgba(214,225,249,0.15)]"
         >
           {languages.map((lang) => (
             <li key={lang.code}>

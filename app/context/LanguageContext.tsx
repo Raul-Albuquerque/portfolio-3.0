@@ -1,41 +1,26 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  type ReactNode,
-} from "react";
-import { en, pt, type Dict, type Locale } from "@/app/i18n";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
-const STORAGE_KEY = "portfolio-locale";
+type Locale = "pt-br" | "en";
 
 interface LanguageContextValue {
   locale: Locale;
-  dict: Dict;
   setLocale: (locale: Locale) => void;
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("PT");
-
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
-    if (stored === "PT" || stored === "EN") setLocaleState(stored);
-  }, []);
+  const [locale, setLocaleState] = useState<Locale>("pt-br");
 
   function setLocale(next: Locale) {
+    console.log(next);
     setLocaleState(next);
-    localStorage.setItem(STORAGE_KEY, next);
   }
 
-  const dict = locale === "PT" ? pt : en;
-
   return (
-    <LanguageContext.Provider value={{ locale, dict, setLocale }}>
+    <LanguageContext.Provider value={{ locale, setLocale }}>
       {children}
     </LanguageContext.Provider>
   );

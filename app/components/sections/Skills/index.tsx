@@ -9,13 +9,20 @@ import { skills } from "@/app/data/skills";
 import SkillCard from "./SkillCard";
 import { RING_CONFIGS } from "./constants";
 import { surgena } from "@/app/fonts";
-import { useLanguage } from "@/app/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const JellyfishCanvas = dynamic(() => import("./JellyfishCanvas"), {
   ssr: false,
 });
+
+const CATEGORY_LABELS: Record<string, string> = {
+  frontend: "Corrente Frontend",
+  backend: "Corrente Backend",
+  database: "Corrente de Banco de Dados",
+  infra: "Corrente de Infraestrutura & Ferramentas",
+  "digital-marketing": "Corrente de Marketing Digital",
+};
 
 // One extra page at the start before any ring activates
 const SCROLL_PAGES = RING_CONFIGS.length + 1;
@@ -35,7 +42,6 @@ export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { dict } = useLanguage();
 
   const searchParams = useSearchParams();
   const isMkt = searchParams.get("isMkt") === "1";
@@ -106,18 +112,17 @@ export default function Skills() {
           className="absolute inset-0 z-20 flex flex-col items-center justify-start text-center px-4 pt-28 pointer-events-none select-none"
           style={{ opacity: introOpacity, transition: "opacity 0.1s linear" }}
         >
-          <div className="mb-32">
-            <p suppressHydrationWarning className="text-gray-500 text-sm tracking-widest uppercase mb-4">
-              {dict.skills.eyebrow}
+          <div className="mb-32 text-center">
+            <p className="text-gray-500 text-sm tracking-widest uppercase mb-4">
+              SEMPRE EM MOVIMENTO
             </p>
             <h2
-              suppressHydrationWarning
               className={`${surgena.className} text-5xl md:text-7xl bg-linear-to-r from-(--color-gradient-from) to-(--color-gradient-to) bg-clip-text text-transparent mb-4`}
             >
-              {dict.skills.title}
+              MINHAS HABILIDADES
             </h2>
-            <p suppressHydrationWarning className="text-xs text-gray-500 max-w-xs leading-relaxed">
-              {dict.skills.subtitle}
+            <p className="text-xs text-gray-500 max-w-xs leading-relaxed mx-auto">
+              Correntes que nunca param — role e mergulhe em cada uma
             </p>
           </div>
         </div>
@@ -129,7 +134,7 @@ export default function Skills() {
               key={group.categoryID}
               group={group}
               visible={i === activeRingIndex}
-              categoryLabel={dict.skills.categories[group.categoryID]}
+              categoryLabel={CATEGORY_LABELS[group.categoryID]}
             />
           ))}
         </div>

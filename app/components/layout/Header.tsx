@@ -7,19 +7,12 @@ import { Menu, X } from "lucide-react";
 import MobileMenu from "../ui/MobileMenu";
 import LanguageSwitch from "../ui/LanguageSwitch";
 import NavItem from "../ui/NavItem";
-import { useLanguage } from "@/app/context/LanguageContext";
+
+const navItems = ["Sobre", "Habilidades", "Experiência", "Contato"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { dict } = useLanguage();
-
-  const navItems = [
-    dict.header.nav.about,
-    dict.header.nav.skills,
-    dict.header.nav.experience,
-    dict.header.nav.contact,
-  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -39,7 +32,7 @@ export default function Header() {
     >
       <nav className="container py-4 mx-auto flex items-center justify-between">
         <h1>
-          <a href="#" aria-label={dict.header.logoAriaLabel}>
+          <a href="#" aria-label="Ir para o topo">
             <Image
               src="/logo.svg"
               alt="Raul Albuquerque Logo"
