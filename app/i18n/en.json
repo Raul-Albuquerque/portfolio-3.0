@@ -1,10 +1,10 @@
 {
   "header": {
     "logoAriaLabel": "Back to top",
+    "menuAriaLabel": "Open menu",
     "nav": {
       "about": "About",
       "skills": "Skills",
-      "experience": "Experience",
       "contact": "Contact"
     }
   },
@@ -17,6 +17,12 @@
     "eyebrow": "ALWAYS IN MOTION",
     "title": "MY SKILLS",
     "subtitle": "Currents that never stop — scroll and dive into each one",
+    "subtitleMobile": "Currents that never stop — tap to navigate",
+    "prevLabel": "Previous",
+    "nextLabel": "Next",
+    "prevAriaLabel": "Previous category",
+    "nextAriaLabel": "Next category",
+    "dotAriaLabel": "Go to category",
     "categories": {
       "frontend": "Frontend Current",
       "backend": "Backend Current",
@@ -25,10 +31,20 @@
       "digital-marketing": "Digital Marketing Current"
     }
   },
+  "footer": {
+    "tagline": "Full Stack Developer. From interface to server, from concept to deployment — I build complete solutions with the perspective of someone who has lived more than one world.",
+    "links": {
+      "title": "Useful Links"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  },
   "milestones": {
     "title": "MY PATH",
     "subtitle": "EVERY MILESTONE, A TIDE",
     "text": "From military leadership to code — every choice was a current that brought me here.",
+    "scrollCta": "↓ scroll to dive deeper",
     "milestones_cards": {
       "military": {
         "date": "Jun 2016",

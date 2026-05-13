@@ -9,7 +9,7 @@ function Button({ text, onClick, theme }: ButtonProps) {
     <>
       {theme === "hero" ? (
         <button
-          className="bg-linear-to-r from-[#0061FF] to-[#60EFFF] px-6 py-3 rounded-lg text-white font-regular"
+          className="bg-linear-to-r from-[#0061FF] to-[#60EFFF] px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg text-white font-regular text-sm sm:text-base"
           onClick={onClick}
         >
           {text}

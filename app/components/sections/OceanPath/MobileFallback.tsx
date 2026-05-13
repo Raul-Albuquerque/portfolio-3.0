@@ -30,8 +30,8 @@ export default function MobileFallback({ milestones }: Props) {
   const iconOpacity = scrollProgress < 0.05 ? 0 : scrollProgress > 0.9 ? Math.max(0, 1 - (scrollProgress - 0.9) / 0.1) : 1;
 
   return (
-    <div ref={containerRef} className="relative px-4 pb-24">
-      <div className="mx-auto max-w-lg relative">
+    <div ref={containerRef} className="relative px-4 sm:px-6 pb-16 sm:pb-24">
+      <div className="mx-auto max-w-sm sm:max-w-lg relative">
         {/* SVG dashed flight path that draws itself */}
         <svg
           className="absolute left-1/2 top-0 -translate-x-1/2 h-full overflow-visible"
@@ -85,7 +85,6 @@ export default function MobileFallback({ milestones }: Props) {
         <div className="space-y-8">
           {milestones.map((milestone, i) => {
             const isLeft = i % 2 === 0;
-            // Reveal cards progressively based on scroll
             const cardT = (i + 1) / (milestones.length + 1);
             const cardVisible = scrollProgress > cardT - 0.08;
             const cardOpacity = cardVisible ? Math.min(1, (scrollProgress - (cardT - 0.08)) / 0.06) : 0;
@@ -94,54 +93,40 @@ export default function MobileFallback({ milestones }: Props) {
             return (
               <div
                 key={milestone.key}
-                className={`relative ${isLeft ? "pr-[52%] text-right" : "pl-[52%] text-left"}`}
-                style={{
-                  opacity: cardOpacity,
-                  transform: `translateX(${cardX}px)`,
-                  transition: "none",
-                }}
+                style={{ opacity: cardOpacity, transform: `translateX(${cardX}px)`, transition: "none" }}
               >
-                {/* Waypoint dot */}
-                <div
-                  className="absolute left-1/2 top-3 -translate-x-1/2"
-                  style={{ opacity: cardOpacity }}
-                >
-                  <div className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#0061ff]/40 bg-[#020d1a]">
+                {/* Mobile (< sm): full-width card with centered dot above */}
+                <div className="sm:hidden relative pl-10">
+                  <div className="absolute left-0 top-3 flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#0061ff]/40 bg-[#020d1a]" style={{ opacity: cardOpacity }}>
                     <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="#60efff">
                       <path d="M3 18c0-4 3-7 6-8l3-1c3-1 6-4 6-8h2c0 5-3 9-7 10l-3 1c-2.5.8-5 3-5 6H3z" />
                     </svg>
                   </div>
+                  <div className="rounded-2xl p-4 backdrop-blur-sm" style={{ border: "1px solid rgba(96,239,255,0.15)", background: "rgba(2,13,26,0.85)", boxShadow: "0 4px 24px rgba(0,97,255,0.1)" }}>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="inline-block rounded-full px-3 py-0.5 text-xs font-semibold" style={{ background: "rgba(0,97,255,0.18)", color: "#60efff" }}>{milestone.time}</span>
+                      {milestone.region && <span className="text-xs" style={{ color: "rgba(96,239,255,0.5)", letterSpacing: "0.05em" }}>{milestone.region}</span>}
+                    </div>
+                    <h4 className="text-sm font-bold mb-1" style={{ color: "#f0f9ff" }}>{milestone.title}</h4>
+                    <p className="text-xs leading-relaxed" style={{ color: "rgba(148,163,184,0.9)" }}>{milestone.description}</p>
+                  </div>
                 </div>
 
-                {/* Card */}
-                <div
-                  className="rounded-2xl p-4 backdrop-blur-sm"
-                  style={{
-                    border: "1px solid rgba(96,239,255,0.15)",
-                    background: "rgba(2,13,26,0.85)",
-                    boxShadow: "0 4px 24px rgba(0,97,255,0.1)",
-                  }}
-                >
-                  <span
-                    className="inline-block rounded-full px-3 py-0.5 text-xs font-semibold"
-                    style={{ background: "rgba(0,97,255,0.18)", color: "#60efff" }}
-                  >
-                    {milestone.time}
-                  </span>
-                  {milestone.region && (
-                    <span
-                      className="ml-2 text-xs"
-                      style={{ color: "rgba(96,239,255,0.5)", letterSpacing: "0.05em" }}
-                    >
-                      {milestone.region}
-                    </span>
-                  )}
-                  <h4 className="mt-2 text-sm font-bold" style={{ color: "#f0f9ff" }}>
-                    {milestone.title}
-                  </h4>
-                  <p className="mt-1 text-xs leading-relaxed" style={{ color: "rgba(148,163,184,0.9)" }}>
-                    {milestone.description}
-                  </p>
+                {/* sm+ : alternating left/right layout */}
+                <div className={`hidden sm:block relative ${isLeft ? "pr-[52%] text-right" : "pl-[52%] text-left"}`}>
+                  <div className="absolute left-1/2 top-3 -translate-x-1/2" style={{ opacity: cardOpacity }}>
+                    <div className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#0061ff]/40 bg-[#020d1a]">
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="#60efff">
+                        <path d="M3 18c0-4 3-7 6-8l3-1c3-1 6-4 6-8h2c0 5-3 9-7 10l-3 1c-2.5.8-5 3-5 6H3z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="rounded-2xl p-4 backdrop-blur-sm" style={{ border: "1px solid rgba(96,239,255,0.15)", background: "rgba(2,13,26,0.85)", boxShadow: "0 4px 24px rgba(0,97,255,0.1)" }}>
+                    <span className="inline-block rounded-full px-3 py-0.5 text-xs font-semibold" style={{ background: "rgba(0,97,255,0.18)", color: "#60efff" }}>{milestone.time}</span>
+                    {milestone.region && <span className="ml-2 text-xs" style={{ color: "rgba(96,239,255,0.5)", letterSpacing: "0.05em" }}>{milestone.region}</span>}
+                    <h4 className="mt-2 text-sm font-bold" style={{ color: "#f0f9ff" }}>{milestone.title}</h4>
+                    <p className="mt-1 text-xs leading-relaxed" style={{ color: "rgba(148,163,184,0.9)" }}>{milestone.description}</p>
+                  </div>
                 </div>
               </div>
             );

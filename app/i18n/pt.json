@@ -1,10 +1,10 @@
 {
   "header": {
     "logoAriaLabel": "Ir para o topo",
+    "menuAriaLabel": "Abrir menu",
     "nav": {
       "about": "Sobre",
       "skills": "Habilidades",
-      "experience": "Experiência",
       "contact": "Contato"
     }
   },
@@ -17,6 +17,12 @@
     "eyebrow": "SEMPRE EM MOVIMENTO",
     "title": "MINHAS HABILIDADES",
     "subtitle": "Correntes que nunca param — role e mergulhe em cada uma",
+    "subtitleMobile": "Correntes que nunca param — toque para navegar",
+    "prevLabel": "Anterior",
+    "nextLabel": "Próxima",
+    "prevAriaLabel": "Categoria anterior",
+    "nextAriaLabel": "Próxima categoria",
+    "dotAriaLabel": "Ir para categoria",
     "categories": {
       "frontend": "Corrente Frontend",
       "backend": "Corrente Backend",
@@ -25,10 +31,20 @@
       "digital-marketing": "Corrente de Marketing Digital"
     }
   },
+  "footer": {
+    "tagline": "Desenvolvedor Full Stack. Da interface ao servidor, do conceito ao deploy — construo soluções completas com visão de quem viveu mais de um mundo.",
+    "links": {
+      "title": "Links Úteis"
+    },
+    "contact": {
+      "title": "Contato"
+    }
+  },
   "milestones": {
     "title": "MINHA JORNADA",
     "subtitle": "CADA MARCO, UMA MARÉ",
-    "text": "Da liderança militar ao código — cada escolha foi uma corrent que me trouxe até aqui.",
+    "text": "Da liderança militar ao código — cada escolha foi uma corrente que me trouxe até aqui.",
+    "scrollCta": "↓ role para mergulhar mais fundo",
     "milestones_cards": {
       "military": {
         "date": "JUN 2016",

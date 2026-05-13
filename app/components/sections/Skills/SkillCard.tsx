@@ -39,14 +39,14 @@ export default function SkillCard({ group, visible, categoryLabel }: Props) {
       ref={cardRef}
       className="absolute left-1/2 pointer-events-none select-none"
       style={{
-        bottom: "2.5rem",
+        bottom: "clamp(1rem, 4vh, 2.5rem)",
         transform: "translateX(-50%) translateY(16px)",
         opacity: 0,
-        width: "min(90vw, 680px)",
+        width: "min(92vw, 680px)",
       }}
     >
       <div
-        className="rounded-2xl px-6 py-5 backdrop-blur-md"
+        className="rounded-2xl px-4 py-4 sm:px-6 sm:py-5 backdrop-blur-md"
         style={{
           background: "rgba(2, 8, 28, 0.78)",
           border: "1px solid rgba(96, 239, 255, 0.2)",
