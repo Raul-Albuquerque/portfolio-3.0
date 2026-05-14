@@ -39,7 +39,7 @@ export default function SkillCard({ group, visible, categoryLabel }: Props) {
       ref={cardRef}
       className="absolute left-1/2 pointer-events-none select-none"
       style={{
-        bottom: "clamp(1rem, 4vh, 2.5rem)",
+        bottom: "clamp(2rem, 8vh, 5rem)",
         transform: "translateX(-50%) translateY(16px)",
         opacity: 0,
         width: "min(92vw, 680px)",

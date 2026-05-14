@@ -196,6 +196,14 @@ export default function Skills() {
             }}
           />
 
+          <div
+            className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
+            style={{
+              height: "22vh",
+              background: "linear-gradient(to top, #070a17 0%, transparent 100%)",
+            }}
+          />
+
           <JellyfishCanvas
             scrollProgress={scrollProgress}
             activeRingIndex={activeRingIndex}

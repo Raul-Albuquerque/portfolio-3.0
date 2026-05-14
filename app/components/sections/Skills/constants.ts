@@ -4,7 +4,7 @@ export const CAMERA_FOV = 60;
 export const CAMERA_Z = 11;
 export const MOBILE_BREAKPOINT = 768;
 
-export const BG_COLOR = 0x020d1a;
+export const BG_COLOR = 0x070a17;
 export const AMBIENT_INTENSITY = 0.3;
 
 export const KEY_LIGHT_COLOR = 0x60efff;

@@ -30,7 +30,10 @@ export default function Hero() {
         <Button
           text={dict.hero.cta}
           theme="hero"
-          onClick={() => console.log("clicado")}
+          onClick={() => {
+            const el = document.getElementById("skills");
+            el?.scrollIntoView({ behavior: "smooth" });
+          }}
         />
       </article>
     </section>

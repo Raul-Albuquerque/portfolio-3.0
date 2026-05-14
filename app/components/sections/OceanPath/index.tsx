@@ -67,8 +67,8 @@ export default function OceanPath() {
   return (
     <section id="ocean-path">
       <div
-        className="px-6 sm:px-8 pt-16 sm:pt-20 md:pt-24 pb-8 text-center"
-        style={{ background: "var(--color-bg)" }}
+        className="px-6 sm:px-8 pt-16 sm:pt-20 md:pt-24 pb-16 text-center"
+        style={{ background: "linear-gradient(to bottom, #070a17 0%, #010810 100%)" }}
       >
         <p
           className="text-xs tracking-widest uppercase mb-4"
